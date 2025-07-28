@@ -72,9 +72,7 @@ const sessionOption={
 };
 
 
-// app.get("/",(req,res)=>{
-//     res.send("Hi, i am root");
-// });
+
 
 
 // yeh bhi middleware hi hai.
@@ -103,6 +101,11 @@ app.use((req,res,next)=>{
 //     let registeredUser = await User.register(fakeUser,"helloworld");
 //     res.send(registeredUser);
 // });
+
+
+app.get("/",(req,res)=>{
+    res.redirect("/listings");
+});
 
 // All Listings Routes
 app.use("/listings",listingsRouter);
